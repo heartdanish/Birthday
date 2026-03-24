@@ -4,46 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Dhiru Bhai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="stars" id="stars"></div>
+    <div class="particles" id="particles"></div>
     <div id="balloons-container"></div>
     
     <section id="homepage" class="section">
-        <div class="welcome-content">
-            <h1 class="welcome-text">Welcome 🎉</h1>
-            <p class="subtitle">Click below to start the party</p>
-            <button id="start-btn" class="start-btn">Start Party 🎂</button>
+        <div class="hero-container">
+            <div class="hero-glow"></div>
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <span class="cake-icon">🎂</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-word">Happy</span>
+                    <span class="title-word">Birthday</span>
+                </h1>
+                <p class="hero-subtitle">Celebrate the wonderful person you are</p>
+                <button id="start-btn" class="start-btn">
+                    <span class="btn-text">Enter Celebration</span>
+                    <span class="btn-icon">✨</span>
+                </button>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="bounce-arrow"></div>
+            </div>
         </div>
     </section>
     
     <section id="birthday-section" class="section hidden">
-        <div class="birthday-content">
-            <h1 class="birthday-text">🎉 Happy Birthday SinghAbhay 🎂</h1>
-            <p class="birthday-message">जन्मदिन की हार्दिक शुभकामनाएँ! 🎉
-आपका यह खास दिन खुशियों, प्यार और मुस्कान से भरा रहे। भगवान करे आपकी हर इच्छा पूरी हो और जीवन में सफलता आपके कदम चूमे। आने वाला हर नया दिन आपके लिए नई उम्मीदें, नए अवसर और ढेर सारी खुशियाँ लेकर आए। आपकी जिंदगी हमेशा रोशनी, सुकून और खुशहाल पलों से भरी रहे।
-
-आपके चेहरे की मुस्कान कभी कम न हो और हर कठिनाई आपके सामने छोटी पड़ जाए। आप अपने हर सपने को पूरा करें और हर मंज़िल को हासिल करें। परिवार और दोस्तों का साथ हमेशा आपके साथ बना रहे और आपका दिल हमेशा खुशियों से भरा रहे।
-
-एक और खूबसूरत साल के लिए ढेर सारी शुभकामनाएँ।
-जन्मदिन मुबारक हो! 🎂✨
-!</p>
-            <div class="floating-emojis">
-                <span class="emoji">🎉</span>
-                <span class="emoji">🎈</span>
-                <span class="emoji">🎂</span>
-                <span class="emoji">✨</span>
-                <span class="emoji">🎁</span>
-                <span class="emoji">🥳</span>
+        <div class="birthday-container">
+            <div class="celebration-frame">
+                <div class="frame-corner tl"></div>
+                <div class="frame-corner tr"></div>
+                <div class="frame-corner bl"></div>
+                <div class="frame-corner br"></div>
+                
+                <div class="birthday-header">
+                    <div class="sparkle-container">
+                        <span class="sparkle">✦</span>
+                        <span class="sparkle">✦</span>
+                        <span class="sparkle">✦</span>
+                    </div>
+                    <h1 class="main-title">Happy Birthday</h1>
+                    <h2 class="name-title">SinghAbhay</h2>
+                    <div class="sparkle-container">
+                        <span class="sparkle">✦</span>
+                        <span class="sparkle">✦</span>
+                        <span class="sparkle">✦</span>
+                    </div>
+                </div>
+                
+                <div class="message-card">
+                    <div class="message-decoration top"></div>
+                    <p class="birthday-message">
+                        जन्मदिन की हार्दिक शुभकामनाएँ! 🎉<br><br>
+                        आपका यह खास दिन खुशियों, प्यार और मुस्कान से भरा रहे। भगवान करे आपकी हर इच्छा पूरी हो और जीवन में सफलता आपके कदम चूमे।<br><br>
+                        आने वाला हर नया दिन आपके लिए नई उम्मीदें, नए अवसर और ढेर सारी खुशियाँ लेकर आए। आपकी जिंदगी हमेशा रोशनी, सुकून और खुशहाल पलों से भरी रहे।<br><br>
+                        आपके चेहरे की मुस्कान कभी कम न हो और हर कठिनाई आपके सामने छोटी पड़ जाए। आप अपने हर सपने को पूरा करें और हर मंज़िल को हासिल करें।<br><br>
+                        एक और खूबसूरत साल के लिए ढेर सारी शुभकामनाएँ।<br>
+                        <strong>जन्मदिन मुबारक हो!</strong> 🎂✨
+                    </p>
+                    <div class="message-decoration bottom"></div>
+                </div>
+                
+                <div class="emoji-showcase">
+                    <span class="showcase-emoji" data-emoji="🎉">🎉</span>
+                    <span class="showcase-emoji" data-emoji="🎈">🎈</span>
+                    <span class="showcase-emoji" data-emoji="🎂">🎂</span>
+                    <span class="showcase-emoji" data-emoji="✨">✨</span>
+                    <span class="showcase-emoji" data-emoji="🎁">🎁</span>
+                    <span class="showcase-emoji" data-emoji="🥳">🥳</span>
+                    <span class="showcase-emoji" data-emoji="🎊">🎊</span>
+                    <span class="showcase-emoji" data-emoji="⭐">⭐</span>
+                </div>
             </div>
         </div>
         <div id="confetti-container"></div>
     </section>
     
     <div class="fireworks" id="fireworks"></div>
-
-    <audio id="bg-music" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" loop></audio>
-    <audio id="click-sound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+    
+    <button class="music-toggle" id="music-toggle" title="Toggle Music">
+        <i class="fas fa-music"></i>
+    </button>
+    
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946c5d23e1.mp3" type="audio/mp3">
+    </audio>
     
     <script src="script.js"></script>
 </body>
