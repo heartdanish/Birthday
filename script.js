@@ -164,6 +164,52 @@ function startParty() {
     }, 800);
 }
 
+function createFlyingEmoji(x, y, emoji) {
+    const flying = document.createElement('div');
+    flying.className = 'flying-emoji';
+    flying.textContent = emoji;
+    flying.style.left = `${x}px`;
+    flying.style.top = `${y}px`;
+    
+    const angle = Math.random() * Math.PI * 2;
+    const distance = 200 + Math.random() * 300;
+    const duration = 1 + Math.random() * 1;
+    const rotation = (Math.random() - 0.5) * 720;
+    
+    flying.style.setProperty('--tx', `${Math.cos(angle) * distance}px`);
+    flying.style.setProperty('--ty', `${Math.sin(angle) * distance}px`);
+    flying.style.setProperty('--rotation', `${rotation}deg`);
+    flying.style.animation = `flyEmoji ${duration}s ease-out forwards`;
+    
+    document.body.appendChild(flying);
+    
+    setTimeout(() => {
+        flying.remove();
+    }, duration * 1000);
+}
+
+function handleEmojiClick(e) {
+    const emojis = ['🎉', '🎈', '🎂', '✨', '🎁', '🥳', '🎊', '⭐', '🌟', '💫'];
+    const clickedEmoji = e.target.textContent;
+    const rect = e.target.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            createFlyingEmoji(x, y, randomEmoji);
+        }, i * 30);
+    }
+    
+    playClickSound();
+}
+
+document.querySelectorAll('.floating-emojis .emoji').forEach(emoji => {
+    emoji.style.cursor = 'pointer';
+    emoji.addEventListener('click', handleEmojiClick);
+});
+
 startBtn.addEventListener('click', startParty);
 
 initBalloons();
